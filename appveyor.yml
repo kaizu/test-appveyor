@@ -21,10 +21,15 @@ install:
   - if "%PYTHON_VERSION%" == "3.6.5" ls C:\Miniconda36-x64
   - conda skeleton pypi autopep8
   - ls
-  # - if NOT "%PYTHON_VERSION%" == "2.7.14" if "%PYTHON_ARCH%" == "64" cmake -G "Visual Studio 14 2015 Win64" -D CMAKE_CXX_FLAGS_RELEASE="/MD" -D CMAKE_CXX_FLAGS_DEBUG="/MDd" -D CMAKE_C_FLAGS_RELEASE="/MD" -D CMAKE_C_FLAGS_DEBUG="/MDd" .
+  - ls autopep8
+  - conda build autopep8
+  - if "%PYTHON_VERSION%" == "3.6.5" ls C:\Miniconda36-x64\conda-bld
 
 build: false
 
 branches:
   only:
     - master
+
+# artifacts:
+# - path: =C:\Miniconda36-x64\conda-bld\linux-64
