@@ -1,0 +1,27 @@
+environment:
+  global:
+    HDF_DIR: "C:/Program Files (x86)/HDF_Group/HDF5/1.8.17/lib"
+    BOOST_ROOT: C:\Libraries\boost_1_67_0
+
+  matrix:
+    # - PYTHON: "C:\\Python27-x64"
+    #   PYTHON_VERSION: "2.7.12"
+    #   PYTHON_ARCH: "64"
+
+    - PYTHON: "C:\\Python36-x64"
+      PYTHON_VERSION: "3.6.5"
+      PYTHON_ARCH: "64"
+      
+init:
+  - cmd: cmake --version
+
+install:
+  - if "%PYTHON_VERSION%" == "3.6.5" ls C:\Miniconda36-x64
+
+  # - if NOT "%PYTHON_VERSION%" == "2.7.14" if "%PYTHON_ARCH%" == "64" cmake -G "Visual Studio 14 2015 Win64" -D CMAKE_CXX_FLAGS_RELEASE="/MD" -D CMAKE_CXX_FLAGS_DEBUG="/MDd" -D CMAKE_C_FLAGS_RELEASE="/MD" -D CMAKE_C_FLAGS_DEBUG="/MDd" .
+
+build: false
+
+branches:
+  only:
+    - master
