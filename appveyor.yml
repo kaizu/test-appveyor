@@ -28,7 +28,7 @@ install:
   - ls %MINICONDAPATH%\conda-bld
   - ls
 
-  - conda skelton pypi ecell
+  - conda skeleton pypi ecell
   - ls
   - ls ecell
 
