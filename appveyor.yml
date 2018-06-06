@@ -20,12 +20,17 @@ install:
   - set PATH=%MINICONDAPATH%;%MINICONDAPATH%\Scripts;%PATH%
   - conda install -y -n root conda-build
   - ls %MINICONDAPATH%
+  
   - conda skeleton pypi autopep8
   - ls
   - ls autopep8
   - conda build --output-folder . autopep8
   - ls %MINICONDAPATH%\conda-bld
   - ls
+
+  - conda skelton pypi ecell
+  - ls
+  - ls ecell
 
 build: false
 
