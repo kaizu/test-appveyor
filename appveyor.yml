@@ -1,7 +1,7 @@
 environment:
-  global:
-    # HDF_DIR: "C:/Program Files (x86)/HDF_Group/HDF5/1.8.17/lib"
-    # BOOST_ROOT: C:\Libraries\boost_1_67_0
+  # global:
+  #   HDF_DIR: "C:/Program Files (x86)/HDF_Group/HDF5/1.8.17/lib"
+  #   BOOST_ROOT: C:\Libraries\boost_1_67_0
 
   matrix:
     # - PYTHON: "C:\\Python27-x64"
@@ -12,8 +12,8 @@ environment:
       PYTHON_VERSION: "3.6.5"
       PYTHON_ARCH: "64"
       
-init:
-  # - cmd: cmake --version
+# init:
+#   - cmd: cmake --version
 
 install:
   - if "%PYTHON_VERSION%" == "3.6.5" set MINICONDAPATH=C:\Miniconda36-x64
