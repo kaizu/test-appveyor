@@ -34,4 +34,4 @@ branches:
     - master
 
 artifacts:
-  - path: .
+  - path: win-64
