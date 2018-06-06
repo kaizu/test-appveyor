@@ -23,8 +23,9 @@ install:
   - conda skeleton pypi autopep8
   - ls
   - ls autopep8
-  - conda build autopep8
+  - conda build --output-folder conda-bld autopep8
   - ls %MINICONDAPATH%\conda-bld
+  - ls conda-bld
 
 build: false
 
@@ -33,4 +34,4 @@ branches:
     - master
 
 artifacts:
-  - path: C:\Miniconda36-x64\conda-bld\win-64
+  - path: conda-bld\win-64
