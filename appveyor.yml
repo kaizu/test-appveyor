@@ -17,8 +17,10 @@ init:
 
 install:
   - if "%PYTHON_VERSION%" == "3.6.5" set PATH=C:\Miniconda36-x64;C:\Miniconda36-x64\Scripts;%PATH%
-  - conda install -n root conda-build
+  - conda install -y -n root conda-build
   - if "%PYTHON_VERSION%" == "3.6.5" ls C:\Miniconda36-x64
+  - conda skeleton pypi autopep8
+  - ls
   # - if NOT "%PYTHON_VERSION%" == "2.7.14" if "%PYTHON_ARCH%" == "64" cmake -G "Visual Studio 14 2015 Win64" -D CMAKE_CXX_FLAGS_RELEASE="/MD" -D CMAKE_CXX_FLAGS_DEBUG="/MDd" -D CMAKE_C_FLAGS_RELEASE="/MD" -D CMAKE_C_FLAGS_DEBUG="/MDd" .
 
 build: false
